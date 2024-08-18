@@ -1,81 +1,109 @@
 import "./App.scss";
 
+import IconArrowDown from "./components/icons/IconArrowDown"
+import IconBook from "./components/icons/IconBook"
+import IconCloseX from "./components/icons/IconCloseX"
+import IconGlob from "./components/icons/IconGlob"
+import IconGoDown from "./components/icons/IconGoDown"
+import IconGoTop from "./components/icons/IconGoTop"
+import IconHands from "./components/icons/IconHands"
+import IconHat from "./components/icons/IconHat"
+import IconInfo from "./components/icons/IconInfo"
+import IconOpenNew from "./components/icons/IconOpenNew"
+import IconPlus from "./components/icons/IconPlus"
+import IconWait from "./components/icons/IconWait"
+
+import IconInstagramBig from "./components/icons/IconInstagramBig"
+import IconFacebookBig from "./components/icons/IconFacebookBig"
+import IconYouTubeBig from "./components/icons/IconYouTubeBig"
+
+import IconMailBig from "./components/icons/IconMailBig"
+import IconStarBig from "./components/icons/IconStarBig"
+import IconPhoneBig from "./components/icons/IconPhoneBig"
+import IconGiftBig from "./components/icons/IconGiftBig"
+import IconScreenBig from "./components/icons/IconScreenBig"
+
+import IconDuchNauki from "./components/icons/IconDuchNauki"
 function App() {
   return (
     <>
       <Header>
         <div>
-          <a href="">🤪 logo</a>
+          <a href=""><Icon name="duch-nauki"/> logo</a>
           <nav>
             <ul>
               <li>
-                <a href="">❤️Wprowadzenie</a>
+                <a href=""><Icon name="book"/>Wprowadzenie</a>
               </li>
               <li>
-                <a href="">💚Demo</a>
+                <a href=""><Icon name="hat"/>Demo</a>
               </li>
               <li>
-                <a href="">❤️FAQ</a>
+                <a href=""><Icon name="info"/>FAQ</a>
               </li>
               <li>
-                <a href="">💚Kontakt</a>
+                <a href=""><Icon name="hands"/>Kontakt</a>
               </li>
-              <button>🌐 Polski ⬇️</button>
+              <button><Icon name="glob"/> Polski <Icon name="arrow-down"/></button>
             </ul>
           </nav>
         </div>
       </Header>
       <Main>
         <Billboard>
-          <h2>
+          <Heading type="h2">
             &quot;Szczęśliwy człowiek, który znalazł mądrość, i człowiek, który
             nabył rozumu, gdyż lepszy jej zysk niż srebro i lepszy jej plon niż
             złoto.&quot; (Prz 3:13-14)
-          </h2>
-          <button>⬇️</button>
+          </Heading>
+          <Button type="link" href="#hero">
+            <Icon name="go-down" />
+          </Button>
         </Billboard>
         <Hero>
-          <section>
-            <h1>Odkrywaj Duchową Mądrość: Ścieżki Wiedzy i Źródła Wiary</h1>
-            <p>
+          <section id="hero">
+            <Heading type="h1">
+              Odkrywaj Duchową Mądrość: Ścieżki Wiedzy i Źródła Wiary
+            </Heading>
+            <Text>
               Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po bogactwach
               duchowej mądrości. Tu, na krzyżujących się ścieżkach wiedzy i
               źródeł wiary, odkryjesz głębokie prawdy, które ułatwią ci
               zrozumienie Boskiej istoty i sensu Twojej egzystencji.
-            </p>
-            <button>Zobacz demo</button>
+            </Text>
+            <Button type="button">Zobacz demo</Button>
           </section>
           <section>
-            <h2>Jak to działa?</h2>
+            <Heading type="h2">Jak to działa?</Heading>
             <ul>
               <li>
                 <section>
-                  ❤️
-                  <p>Opowiadasz nam o swoim projekcie</p>
+                <Icon name="phone"/>
+                  <Text>Opowiadasz nam o swoim projekcie</Text>
                 </section>
               </li>
               <li>
                 <section>
-                  💚
-                  <p>Wysyłasz nam twoje materiały</p>
+                <Icon name="mail"/>
+                  <Text>Wysyłasz nam twoje materiały</Text>
                 </section>
               </li>
               <li>
                 <section>
-                  ❤️
-                  <p>Tworzymy lekcję prezentacyjną</p>
+                <Icon name="screen"/>
+                  <Text>Tworzymy lekcję prezentacyjną</Text>
                 </section>
               </li>
               <li>
                 <section>
-                  💚
-                  <p>Łączymy siły by projekt się rozwijał</p>
+                <Icon name="gift"/>
+                  <Text>Łączymy siły by projekt się rozwijał</Text>
                 </section>
               </li>
               <li>
                 <section>
-                  ❤️
-                  <p>Super nasz wspólny projekt!</p>
+                <Icon name="star"/>
+                  <Text>Super nasz wspólny projekt!</Text>
                 </section>
               </li>
             </ul>
@@ -83,108 +111,110 @@ function App() {
         </Hero>
         <Demo>
           <header>
-            <h2>Zobacz nasze gry i próbne lekcje</h2>
-            <p>
+            <Heading type="h2">Zobacz nasze gry i próbne lekcje</Heading>
+            <Text>
               Interaktywna lekcja dostosowana do potrzeb młodzieży, zawierająca
               ciekawe wyzwania i tematy, które angażują i inspirują do
               refleksji.
-            </p>
+            </Text>
             <section>
               <article>
-                <h3>Dla młodzieży</h3>
-                <p>
+                <Heading type="h3">Dla młodzieży</Heading>
+                <Text>
                   Interaktywna lekcja dostosowana do potrzeb młodzieży, które
                   angażują i inspirują do refleksji.
-                </p>
-                <a href="">❤️Zobacz Demo</a>
+                </Text>
+                <a href=""><Icon name="hat"/>Zobacz Demo</a>
               </article>
               <article>
-                <h3>Dla dorosłych</h3>
-                <p>Interaktywna lekcja dostosowana do potrzeb dorosłych</p>
-                <a href="">❤️Zobacz Demo</a>
+                <Heading type="h3">Dla dorosłych</Heading>
+                <Text>
+                  Interaktywna lekcja dostosowana do potrzeb dorosłych
+                </Text>
+                <a href=""><Icon name="hat"/>Zobacz Demo</a>
               </article>
               <article>
-                <h3>Dla dzieci</h3>
-                <p>
+                <Heading type="h3">Dla dzieci</Heading>
+                <Text>
                   Interaktywna lekcja dostosowana do potrzeb młodzieży,
                   zawierająca ciekawe wyzwania i tematy, które angażują i
                   inspirują do refleksji.
-                </p>
-                <a href="">❤️Zobacz Demo</a>
+                </Text>
+                <a href=""><Icon name="hat"/>Zobacz Demo</a>
               </article>
               <article>
-                <h3>Inne</h3>
-                <p>Mini gry i zabawy</p>
-                <a href="">❤️Zobacz Demo</a>
+                <Heading type="h3">Inne</Heading>
+                <Text>Mini gry i zabawy</Text>
+                <a href=""><Icon name="hat"/>Zobacz Demo</a>
               </article>
             </section>
           </header>
         </Demo>
         <FAQ>
           <header>
-            <h2>FAQs</h2>
-            <p>
+            <Heading type="h2">FAQs</Heading>
+            <Text>
               Interaktywna lekcja dostosowana do potrzeb młodzieży, zawierająca
               ciekawe wyzwania i tematy, które angażują i inspirują do
               refleksji.
-            </p>
+            </Text>
           </header>
           <section>
             <article>
               <button>
-                <h3>
+                <Heading type="h3">
                   Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po?
-                </h3>
-                🤡
+                </Heading>
+                <Icon name="plus"/>
               </button>
-              <p>
+              <Text>
                 Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po
                 bogactwach duchowej mądrości. Tu, na krzyżujących się ścieżkach
                 wiedzy i źródeł wiary, odkryjesz głębokie prawdy, które ułatwią
                 ci zrozumienie Boskiej istoty i sensu Twojej egzystencji.
-              </p>
+              </Text>
             </article>
           </section>
         </FAQ>
         <Contact>
           <header>
-            <h2>Napisz do nas!</h2>
-            <p>
+            <Heading type="h2">Napisz do nas!</Heading>
+            <Text>
               Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po bogactwach
               duchowej mądrości. Tu, na krzyżujących się
-            </p>
+            </Text>
           </header>
           <section>
-            <h2>Kontakt</h2>
+            <Heading type="h2">Kontakt</Heading>
             <ul>
               <li>
                 <section>
-                  ❤️
-                  <p>123 456 789</p>
+                <Icon name="phone"/>
+                  <Text>123 456 789</Text>
                 </section>
               </li>
               <li>
                 <section>
-                  💚
-                  <p>email@email.com</p>
+                <Icon name="mail"/>
+                  <Text>email@email.com</Text>
                 </section>
               </li>
               <li>
                 <section>
-                  ❤️
-                  <p>instagram</p>
+                <Icon name="instagram"/>
+                  <Text>instagram</Text>
                 </section>
               </li>
               <li>
                 <section>
-                  💚
-                  <p>facebook</p>
+                <Icon name="facebook"/>
+                  <Text>facebook</Text>
                 </section>
               </li>
               <li>
                 <section>
-                  ❤️
-                  <p>youtube</p>
+                <Icon name="youtube"/>
+                  <Text>youtube</Text>
                 </section>
               </li>
             </ul>
@@ -192,8 +222,8 @@ function App() {
         </Contact>
       </Main>
       <Footer>
-        <button>⬆️</button>
-        <a href="">🌐 Created by kamil-mlu.pl</a>
+        <Button type="button"><Icon name="go-top"/></Button>
+        <Button  type="link" href=""><Icon name="open-new"/> Created by kamil-mlu.pl</Button>
       </Footer>
     </>
   );
@@ -210,7 +240,7 @@ function Main({ children }) {
 }
 
 function Billboard({ children }) {
-  return <div>{children}</div>;
+  return <section className="billboard">{children}</section>;
 }
 
 function Hero({ children }) {
@@ -231,4 +261,73 @@ function Contact({ children }) {
 
 function Footer({ children }) {
   return <footer>{children}</footer>;
+}
+
+function Heading({ children, type }) {
+  return (
+    <>
+      {type === "h1" && <h1>{children}</h1>}
+      {type === "h2" && <h2>{children}</h2>}
+      {type === "h3" && <h3>{children}</h3>}
+    </>
+  );
+}
+
+function Text({ children, variant }) {
+  return <p className={variant ? `txt ${variant}` : "txt"}>{children}</p>;
+}
+
+function Button({ children, type, href, onClick, ariaLabel, variant }) {
+  return (
+    <>
+      {type === "button" && (
+        <button
+          aria-label={ariaLabel}
+          className={variant ? `button ${variant}` : "button"}
+          onClick={onClick}
+        >
+          {children}
+        </button>
+      )}
+      {type === "link" && (
+        <a
+          href={href}
+          aria-label={ariaLabel}
+          rel="nofollow noreferrer noopener"
+          className={variant ? `button ${variant}` : "button"}
+        >
+          {children}
+        </a>
+      )}
+      {type === "card" && <div className="button card">{children}</div>}
+    </>
+  );
+}
+
+function Icon({ name }) {
+  return <>
+  {name === "arrow-down" && <IconArrowDown />}
+  {name === "book" && <IconBook />}
+  {name === "close" && <IconCloseX />}
+  {name === "glob" && <IconGlob />}
+  {name === "go-down" && <IconGoDown />}
+  {name === "go-top" && <IconGoTop />}
+  {name === "hands" && <IconHands />}
+  {name === "hat" && <IconHat />}
+  {name === "info" && <IconInfo />}
+  {name === "open-new" && <IconOpenNew />}
+  {name === "plus" && <IconPlus />}
+  {name === "wait" && <IconWait />}
+
+  {name === "instagram" && <IconInstagramBig />}
+  {name === "facebook" && <IconFacebookBig />}
+  {name === "youtube" && <IconYouTubeBig />}
+  {name === "mail" && <IconMailBig />}
+  {name === "star" && <IconStarBig />}
+  {name === "phone" && <IconPhoneBig />}
+  {name === "gift" && <IconGiftBig />}
+  {name === "screen" && <IconScreenBig />}
+  {name === "duch-nauki" && <IconDuchNauki />}
+
+  </>;
 }
