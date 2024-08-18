@@ -1,52 +1,93 @@
 import "./App.scss";
 
-import IconArrowDown from "./components/icons/IconArrowDown"
-import IconBook from "./components/icons/IconBook"
-import IconCloseX from "./components/icons/IconCloseX"
-import IconGlob from "./components/icons/IconGlob"
-import IconGoDown from "./components/icons/IconGoDown"
-import IconGoTop from "./components/icons/IconGoTop"
-import IconHands from "./components/icons/IconHands"
-import IconHat from "./components/icons/IconHat"
-import IconInfo from "./components/icons/IconInfo"
-import IconOpenNew from "./components/icons/IconOpenNew"
-import IconPlus from "./components/icons/IconPlus"
-import IconWait from "./components/icons/IconWait"
+import IconArrowDown from "./components/icons/IconArrowDown";
+import IconBook from "./components/icons/IconBook";
+import IconCloseX from "./components/icons/IconCloseX";
+import IconGlob from "./components/icons/IconGlob";
+import IconGoDown from "./components/icons/IconGoDown";
+import IconGoTop from "./components/icons/IconGoTop";
+import IconHands from "./components/icons/IconHands";
+import IconHat from "./components/icons/IconHat";
+import IconInfo from "./components/icons/IconInfo";
+import IconOpenNew from "./components/icons/IconOpenNew";
+import IconPlus from "./components/icons/IconPlus";
+import IconWait from "./components/icons/IconWait";
 
-import IconInstagramBig from "./components/icons/IconInstagramBig"
-import IconFacebookBig from "./components/icons/IconFacebookBig"
-import IconYouTubeBig from "./components/icons/IconYouTubeBig"
+import IconInstagramBig from "./components/icons/IconInstagramBig";
+import IconFacebookBig from "./components/icons/IconFacebookBig";
+import IconYouTubeBig from "./components/icons/IconYouTubeBig";
 
-import IconMailBig from "./components/icons/IconMailBig"
-import IconStarBig from "./components/icons/IconStarBig"
-import IconPhoneBig from "./components/icons/IconPhoneBig"
-import IconGiftBig from "./components/icons/IconGiftBig"
-import IconScreenBig from "./components/icons/IconScreenBig"
+import IconMailBig from "./components/icons/IconMailBig";
+import IconStarBig from "./components/icons/IconStarBig";
+import IconPhoneBig from "./components/icons/IconPhoneBig";
+import IconGiftBig from "./components/icons/IconGiftBig";
+import IconScreenBig from "./components/icons/IconScreenBig";
 
-import IconDuchNauki from "./components/icons/IconDuchNauki"
+import IconDuchNauki from "./components/icons/IconDuchNauki";
+
+
+import Header from "./components/header/Header";
+import Nav from "./components/header/Nav";
+
+import Billboard from "./components/billboard/Billboard";
 function App() {
   return (
     <>
       <Header>
-        <div>
-          <a href=""><Icon name="duch-nauki"/> logo</a>
-          <nav>
-            <ul>
+        <div className="main-header__wrapper">
+          <Button type="link" href="">
+            <Icon name="duch-nauki" /> DuchNauki
+          </Button>
+          <Nav>
+          <Button type="button" variant="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </Button>
+            <ul className="nav__list">
               <li>
-                <a href=""><Icon name="book"/>Wprowadzenie</a>
+                <Button type="link" href="">
+                  <Icon name="book" />
+                  Wprowadzenie
+                </Button>
               </li>
               <li>
-                <a href=""><Icon name="hat"/>Demo</a>
+                <Button type="link" href="">
+                  <Icon name="hat" />
+                  Demo
+                </Button>
               </li>
               <li>
-                <a href=""><Icon name="info"/>FAQ</a>
+                <Button type="link" href="">
+                  <Icon name="info" />
+                  FAQ
+                </Button>
               </li>
               <li>
-                <a href=""><Icon name="hands"/>Kontakt</a>
+                <Button type="link" href="">
+                  <Icon name="hands" />
+                  Kontakt
+                </Button>
               </li>
-              <button><Icon name="glob"/> Polski <Icon name="arrow-down"/></button>
+              <li>
+                <Button type="button">
+                  <Icon name="glob" /> Polski <Icon name="arrow-down" />
+                </Button>
+                <ul className="nav__sub-list">
+                  <li>
+                    <Button type="button">
+                      <Icon name="glob" /> Polski
+                    </Button>
+                  </li>
+                  <li>
+                    <Button type="button">
+                      <Icon name="glob" /> English
+                    </Button>
+                  </li>
+                </ul>
+              </li>
             </ul>
-          </nav>
+          </Nav>
         </div>
       </Header>
       <Main>
@@ -56,7 +97,7 @@ function App() {
             nabył rozumu, gdyż lepszy jej zysk niż srebro i lepszy jej plon niż
             złoto.&quot; (Prz 3:13-14)
           </Heading>
-          <Button type="link" href="#hero">
+          <Button type="link" href="#hero" variant="icon">
             <Icon name="go-down" />
           </Button>
         </Billboard>
@@ -78,31 +119,31 @@ function App() {
             <ul>
               <li>
                 <section>
-                <Icon name="phone"/>
+                  <Icon name="phone" />
                   <Text>Opowiadasz nam o swoim projekcie</Text>
                 </section>
               </li>
               <li>
                 <section>
-                <Icon name="mail"/>
+                  <Icon name="mail" />
                   <Text>Wysyłasz nam twoje materiały</Text>
                 </section>
               </li>
               <li>
                 <section>
-                <Icon name="screen"/>
+                  <Icon name="screen" />
                   <Text>Tworzymy lekcję prezentacyjną</Text>
                 </section>
               </li>
               <li>
                 <section>
-                <Icon name="gift"/>
+                  <Icon name="gift" />
                   <Text>Łączymy siły by projekt się rozwijał</Text>
                 </section>
               </li>
               <li>
                 <section>
-                <Icon name="star"/>
+                  <Icon name="star" />
                   <Text>Super nasz wspólny projekt!</Text>
                 </section>
               </li>
@@ -124,14 +165,20 @@ function App() {
                   Interaktywna lekcja dostosowana do potrzeb młodzieży, które
                   angażują i inspirują do refleksji.
                 </Text>
-                <a href=""><Icon name="hat"/>Zobacz Demo</a>
+                <a href="">
+                  <Icon name="hat" />
+                  Zobacz Demo
+                </a>
               </article>
               <article>
                 <Heading type="h3">Dla dorosłych</Heading>
                 <Text>
                   Interaktywna lekcja dostosowana do potrzeb dorosłych
                 </Text>
-                <a href=""><Icon name="hat"/>Zobacz Demo</a>
+                <a href="">
+                  <Icon name="hat" />
+                  Zobacz Demo
+                </a>
               </article>
               <article>
                 <Heading type="h3">Dla dzieci</Heading>
@@ -140,12 +187,18 @@ function App() {
                   zawierająca ciekawe wyzwania i tematy, które angażują i
                   inspirują do refleksji.
                 </Text>
-                <a href=""><Icon name="hat"/>Zobacz Demo</a>
+                <a href="">
+                  <Icon name="hat" />
+                  Zobacz Demo
+                </a>
               </article>
               <article>
                 <Heading type="h3">Inne</Heading>
                 <Text>Mini gry i zabawy</Text>
-                <a href=""><Icon name="hat"/>Zobacz Demo</a>
+                <a href="">
+                  <Icon name="hat" />
+                  Zobacz Demo
+                </a>
               </article>
             </section>
           </header>
@@ -165,7 +218,7 @@ function App() {
                 <Heading type="h3">
                   Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po?
                 </Heading>
-                <Icon name="plus"/>
+                <Icon name="plus" />
               </button>
               <Text>
                 Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po
@@ -189,31 +242,31 @@ function App() {
             <ul>
               <li>
                 <section>
-                <Icon name="phone"/>
+                  <Icon name="phone" />
                   <Text>123 456 789</Text>
                 </section>
               </li>
               <li>
                 <section>
-                <Icon name="mail"/>
+                  <Icon name="mail" />
                   <Text>email@email.com</Text>
                 </section>
               </li>
               <li>
                 <section>
-                <Icon name="instagram"/>
+                  <Icon name="instagram" />
                   <Text>instagram</Text>
                 </section>
               </li>
               <li>
                 <section>
-                <Icon name="facebook"/>
+                  <Icon name="facebook" />
                   <Text>facebook</Text>
                 </section>
               </li>
               <li>
                 <section>
-                <Icon name="youtube"/>
+                  <Icon name="youtube" />
                   <Text>youtube</Text>
                 </section>
               </li>
@@ -222,8 +275,12 @@ function App() {
         </Contact>
       </Main>
       <Footer>
-        <Button type="button"><Icon name="go-top"/></Button>
-        <Button  type="link" href=""><Icon name="open-new"/> Created by kamil-mlu.pl</Button>
+        <Button type="button">
+          <Icon name="go-top" />
+        </Button>
+        <Button type="link" href="">
+          <Icon name="open-new" /> Created by kamil-mlu.pl
+        </Button>
       </Footer>
     </>
   );
@@ -231,17 +288,12 @@ function App() {
 
 export default App;
 
-function Header({ children }) {
-  return <header>{children}</header>;
-}
 
 function Main({ children }) {
   return <main>{children}</main>;
 }
 
-function Billboard({ children }) {
-  return <section className="billboard">{children}</section>;
-}
+
 
 function Hero({ children }) {
   return <div>{children}</div>;
@@ -305,29 +357,30 @@ function Button({ children, type, href, onClick, ariaLabel, variant }) {
 }
 
 function Icon({ name }) {
-  return <>
-  {name === "arrow-down" && <IconArrowDown />}
-  {name === "book" && <IconBook />}
-  {name === "close" && <IconCloseX />}
-  {name === "glob" && <IconGlob />}
-  {name === "go-down" && <IconGoDown />}
-  {name === "go-top" && <IconGoTop />}
-  {name === "hands" && <IconHands />}
-  {name === "hat" && <IconHat />}
-  {name === "info" && <IconInfo />}
-  {name === "open-new" && <IconOpenNew />}
-  {name === "plus" && <IconPlus />}
-  {name === "wait" && <IconWait />}
+  return (
+    <>
+      {name === "arrow-down" && <IconArrowDown />}
+      {name === "book" && <IconBook />}
+      {name === "close" && <IconCloseX />}
+      {name === "glob" && <IconGlob />}
+      {name === "go-down" && <IconGoDown />}
+      {name === "go-top" && <IconGoTop />}
+      {name === "hands" && <IconHands />}
+      {name === "hat" && <IconHat />}
+      {name === "info" && <IconInfo />}
+      {name === "open-new" && <IconOpenNew />}
+      {name === "plus" && <IconPlus />}
+      {name === "wait" && <IconWait />}
 
-  {name === "instagram" && <IconInstagramBig />}
-  {name === "facebook" && <IconFacebookBig />}
-  {name === "youtube" && <IconYouTubeBig />}
-  {name === "mail" && <IconMailBig />}
-  {name === "star" && <IconStarBig />}
-  {name === "phone" && <IconPhoneBig />}
-  {name === "gift" && <IconGiftBig />}
-  {name === "screen" && <IconScreenBig />}
-  {name === "duch-nauki" && <IconDuchNauki />}
-
-  </>;
+      {name === "instagram" && <IconInstagramBig />}
+      {name === "facebook" && <IconFacebookBig />}
+      {name === "youtube" && <IconYouTubeBig />}
+      {name === "mail" && <IconMailBig />}
+      {name === "star" && <IconStarBig />}
+      {name === "phone" && <IconPhoneBig />}
+      {name === "gift" && <IconGiftBig />}
+      {name === "screen" && <IconScreenBig />}
+      {name === "duch-nauki" && <IconDuchNauki />}
+    </>
+  );
 }

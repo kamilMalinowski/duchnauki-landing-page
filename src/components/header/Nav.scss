@@ -1,0 +1,15 @@
+.nav {
+  &__list {
+    display: flex;
+    & li{
+        position: relative;
+    }
+  }
+  &__sub-list{
+    display: none;
+      &.open{
+          position: absolute;
+          
+    }
+  }
+}
