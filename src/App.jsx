@@ -1,93 +1,121 @@
-import "./App.scss";
+import { useState } from "react";
 
-import IconArrowDown from "./components/icons/IconArrowDown";
-import IconBook from "./components/icons/IconBook";
-import IconCloseX from "./components/icons/IconCloseX";
-import IconGlob from "./components/icons/IconGlob";
-import IconGoDown from "./components/icons/IconGoDown";
-import IconGoTop from "./components/icons/IconGoTop";
-import IconHands from "./components/icons/IconHands";
-import IconHat from "./components/icons/IconHat";
-import IconInfo from "./components/icons/IconInfo";
-import IconOpenNew from "./components/icons/IconOpenNew";
-import IconPlus from "./components/icons/IconPlus";
-import IconWait from "./components/icons/IconWait";
-
-import IconInstagramBig from "./components/icons/IconInstagramBig";
-import IconFacebookBig from "./components/icons/IconFacebookBig";
-import IconYouTubeBig from "./components/icons/IconYouTubeBig";
-
-import IconMailBig from "./components/icons/IconMailBig";
-import IconStarBig from "./components/icons/IconStarBig";
-import IconPhoneBig from "./components/icons/IconPhoneBig";
-import IconGiftBig from "./components/icons/IconGiftBig";
-import IconScreenBig from "./components/icons/IconScreenBig";
-
-import IconDuchNauki from "./components/icons/IconDuchNauki";
-
+import Button from "./components/ui/Button";
+import Icon from "./components/ui/Icon";
 
 import Header from "./components/header/Header";
 import Nav from "./components/header/Nav";
-
 import Billboard from "./components/billboard/Billboard";
+import Footer from "./components/footer/Footer";
+
+import "./App.scss";
+
 function App() {
+  const [openLang, setOpenLang] = useState(false);
+
+  function handleOpenLang() {
+    setOpenLang((prevLang) => !prevLang);
+  }
+
   return (
     <>
       <Header>
         <div className="main-header__wrapper">
-          <Button type="link" href="">
-            <Icon name="duch-nauki" /> DuchNauki
-          </Button>
-          <Nav>
-          <Button type="button" variant="menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </Button>
-            <ul className="nav__list">
-              <li>
-                <Button type="link" href="">
-                  <Icon name="book" />
-                  Wprowadzenie
+          <div className="main-header__content">
+            <Button type="link" href="https://duchnauki.pl/" variant="logo">
+              <Icon name="duch-nauki" />
+              <Text>DuchNauki</Text>
+            </Button>
+            <Nav>
+              <Button type="button" variant="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </Button>
+              <ul className="nav__list">
+                <li>
+                  <Button
+                    type="link"
+                    href="introduction"
+                    variant="primary radius-small  nav"
+                  >
+                    <Icon name="book" />
+                    Wprowadzenie
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    type="link"
+                    href="demo"
+                    variant="primary  radius-small nav disabled"
+                  >
+                    <Icon name="hat" />
+                    Demo
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    type="link"
+                    href="faq"
+                    variant="primary  radius-small nav disabled"
+                  >
+                    <Icon name="info" />
+                    FAQ
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    type="link"
+                    href="contact"
+                    variant="primary radius-small  nav disabled"
+                  >
+                    <Icon name="hands" />
+                    Kontakt
+                  </Button>
+                </li>
+              </ul>
+              <div className="nav__lang">
+                <Button
+                  type="button"
+                  variant="primary radius-small"
+                  onClick={handleOpenLang}
+                >
+                  <Icon name="glob" /> Język
+                  <Icon name="arrow-down" />
                 </Button>
-              </li>
-              <li>
-                <Button type="link" href="">
-                  <Icon name="hat" />
-                  Demo
-                </Button>
-              </li>
-              <li>
-                <Button type="link" href="">
-                  <Icon name="info" />
-                  FAQ
-                </Button>
-              </li>
-              <li>
-                <Button type="link" href="">
-                  <Icon name="hands" />
-                  Kontakt
-                </Button>
-              </li>
-              <li>
-                <Button type="button">
-                  <Icon name="glob" /> Polski <Icon name="arrow-down" />
-                </Button>
-                <ul className="nav__sub-list">
+                <ul
+                  className={
+                    openLang ? "nav__lang-list open" : "nav__lang-list"
+                  }
+                >
                   <li>
-                    <Button type="button">
-                      <Icon name="glob" /> Polski
+                    <Button type="button" variant="primary  nav radius-small ">
+                      <Icon name="pl" />
+                      Polski
                     </Button>
                   </li>
                   <li>
-                    <Button type="button">
-                      <Icon name="glob" /> English
+                    <Button type="button" variant="primary  nav radius-small disabled">
+                      <Icon name="en" />
+                      English
+                    </Button>
+                  </li>
+                  <li>
+                    <Button type="button" variant="primary  nav radius-small disabled">
+                      <Icon name="ge" />
+                      Germany
+                    </Button>
+                  </li>
+                  <li>
+                    <Button type="button" variant="primary nav  radius-small disabled">
+                      <Icon name="jp" />
+                      Japan
                     </Button>
                   </li>
                 </ul>
-              </li>
-            </ul>
-          </Nav>
+              </div>
+            </Nav>
+          </div>
         </div>
       </Header>
       <Main>
@@ -275,10 +303,10 @@ function App() {
         </Contact>
       </Main>
       <Footer>
-        <Button type="button">
+        <Button type="button" variant="icon">
           <Icon name="go-top" />
         </Button>
-        <Button type="link" href="">
+        <Button type="link" href="https://kamil-mlu.pl/" variant="primary">
           <Icon name="open-new" /> Created by kamil-mlu.pl
         </Button>
       </Footer>
@@ -288,12 +316,9 @@ function App() {
 
 export default App;
 
-
 function Main({ children }) {
   return <main>{children}</main>;
 }
-
-
 
 function Hero({ children }) {
   return <div>{children}</div>;
@@ -311,10 +336,6 @@ function Contact({ children }) {
   return <div>{children}</div>;
 }
 
-function Footer({ children }) {
-  return <footer>{children}</footer>;
-}
-
 function Heading({ children, type }) {
   return (
     <>
@@ -327,60 +348,4 @@ function Heading({ children, type }) {
 
 function Text({ children, variant }) {
   return <p className={variant ? `txt ${variant}` : "txt"}>{children}</p>;
-}
-
-function Button({ children, type, href, onClick, ariaLabel, variant }) {
-  return (
-    <>
-      {type === "button" && (
-        <button
-          aria-label={ariaLabel}
-          className={variant ? `button ${variant}` : "button"}
-          onClick={onClick}
-        >
-          {children}
-        </button>
-      )}
-      {type === "link" && (
-        <a
-          href={href}
-          aria-label={ariaLabel}
-          rel="nofollow noreferrer noopener"
-          className={variant ? `button ${variant}` : "button"}
-        >
-          {children}
-        </a>
-      )}
-      {type === "card" && <div className="button card">{children}</div>}
-    </>
-  );
-}
-
-function Icon({ name }) {
-  return (
-    <>
-      {name === "arrow-down" && <IconArrowDown />}
-      {name === "book" && <IconBook />}
-      {name === "close" && <IconCloseX />}
-      {name === "glob" && <IconGlob />}
-      {name === "go-down" && <IconGoDown />}
-      {name === "go-top" && <IconGoTop />}
-      {name === "hands" && <IconHands />}
-      {name === "hat" && <IconHat />}
-      {name === "info" && <IconInfo />}
-      {name === "open-new" && <IconOpenNew />}
-      {name === "plus" && <IconPlus />}
-      {name === "wait" && <IconWait />}
-
-      {name === "instagram" && <IconInstagramBig />}
-      {name === "facebook" && <IconFacebookBig />}
-      {name === "youtube" && <IconYouTubeBig />}
-      {name === "mail" && <IconMailBig />}
-      {name === "star" && <IconStarBig />}
-      {name === "phone" && <IconPhoneBig />}
-      {name === "gift" && <IconGiftBig />}
-      {name === "screen" && <IconScreenBig />}
-      {name === "duch-nauki" && <IconDuchNauki />}
-    </>
-  );
 }

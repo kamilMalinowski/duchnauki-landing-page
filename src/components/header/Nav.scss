@@ -1,15 +1,42 @@
 .nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  @media screen and (max-width: 50rem) {
+    flex-direction: row-reverse;
+  }
   &__list {
+    padding: 2px;
+    gap: 2px;
+    border-radius: 0.5rem;
+    background-color: var(--grey-100);
     display: flex;
-    & li{
-        position: relative;
+    @media screen and (max-width: 50rem) {
+      display: none;
+    }
+    & svg path{
+      fill: var(--primary);
     }
   }
-  &__sub-list{
+  &__lang {
+    position: relative;
+  }
+  &__lang-list {
     display: none;
-      &.open{
-          position: absolute;
-          
+    &.open {
+      width: 120%;
+      top: calc(100% + 0.5rem);
+      right: 0;
+      padding: 2px;
+      gap: 2px;
+      border-radius: 0.5rem;
+      background-color: var(--grey-100);
+      display: grid;
+      position: absolute;
+      & button,
+      & li {
+        width: 100%;
+      }
     }
   }
 }

@@ -16,6 +16,7 @@
 
     --primary:#FF7A00;
     --secondary:#226CE0;
+    --secondary-hover: #ebf2ff;
     --tertiary:#FFD400;
 
     --h1:2.563rem;
@@ -72,6 +73,10 @@
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  button{
+    cursor: pointer;
   }
   
   body{

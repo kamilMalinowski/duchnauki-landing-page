@@ -5,42 +5,20 @@
     &__wrapper {
       left: 50%;
       transform: translateX(-50%);
-      width: min(100%, 85rem);
+      width: min(100%, 88rem);
       top: 1.5rem;
       position: fixed;
+      padding: 0 1.5rem;
+    }
+    &__content{
+      box-shadow: 0 0 1rem var(--grey-200);
+      border-radius: 1rem;
+      padding: 1rem;
       background-color: var(--white);
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      max-width: 1360px;
-      margin: 0;
     }
 
   }
   
-
-  .button{
-    display: flex;
-    align-items: center;
-    &.icon{
-        justify-content: center;
-        border-radius: 99rem;
-        width: 2.5rem;
-        height: 2.5rem;
-        background-color: var(--white);
-    }
-    &.menu{
-        display: none;
-        @media screen and (max-width: 48rem) {
-            border-radius: 1rem;
-            border: none;
-            width: 3rem;
-            height: 3rem;
-            display: flex;
-            background-color: var(--secondary);
-            & span{
-                height: 0.4rem;
-                background-color: var(--white);
-            }
-        }
-    }
-  }
