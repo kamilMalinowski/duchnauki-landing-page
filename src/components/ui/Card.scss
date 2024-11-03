@@ -1,0 +1,27 @@
+.card{
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    height: 100%;
+    &.grey{
+        background-color: var(--grey-100);
+        & *{
+            fill:var(--secondary);
+        }
+    }
+    &.white{
+        background-color: var(--white);
+        & *{
+            fill:var(--secondary);
+        }
+    }
+    &.blue{
+        background-color: var(--secondary);
+        & *{
+            fill:var(--white);
+            color: var(--white);
+        }
+    }
+}
