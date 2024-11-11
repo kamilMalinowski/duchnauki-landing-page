@@ -90,6 +90,11 @@ function App() {
   function handleOpenLang() {
     setOpenLang((prevLang) => !prevLang);
   }
+  const [openMenu, setOpenMenu] = useState(false);
+
+  function handleOpenMenu() {
+    setOpenMenu((prevMenu) => !prevMenu);
+  }
 
   const [openAnswerIndex, setOpenAnswerIndex] = useState(0);
 
@@ -107,17 +112,17 @@ function App() {
               <Text>DuchNauki</Text>
             </Button>
             <Nav>
-              <Button type="button" variant="menu">
+              <Button onClick={handleOpenMenu} type="button" variant="menu">
                 <span></span>
                 <span></span>
                 <span></span>
               </Button>
-              <ul className="nav__list">
+              <ul className={`nav__list ${openMenu ? "open" : ""}`}>
                 <li>
                   <Button
                     type="link"
-                    href="introduction"
-                    variant="primary radius-small nav"
+                    href="#introduction"
+                    variant="primary radius-small nav nav--active"
                   >
                     <Icon name="book" />
                     Wprowadzenie
@@ -126,8 +131,8 @@ function App() {
                 <li>
                   <Button
                     type="link"
-                    href="demo"
-                    variant="primary radius-small nav disabled"
+                    href="#demo"
+                    variant="primary radius-small nav"
                   >
                     <Icon name="hat" />
                     Demo
@@ -136,8 +141,8 @@ function App() {
                 <li>
                   <Button
                     type="link"
-                    href="faq"
-                    variant="primary radius-small nav disabled"
+                    href="#faq"
+                    variant="primary radius-small nav"
                   >
                     <Icon name="info" />
                     FAQ
@@ -146,14 +151,15 @@ function App() {
                 <li>
                   <Button
                     type="link"
-                    href="contact"
-                    variant="primary radius-small nav disabled"
+                    href="#contact"
+                    variant="primary radius-small nav"
                   >
                     <Icon name="hands" />
                     Kontakt
                   </Button>
                 </li>
               </ul>
+              <div className="nav__separator"></div>
               <div className="nav__lang">
                 <Button
                   type="button"
@@ -214,7 +220,7 @@ function App() {
             nabył rozumu, gdyż lepszy jej zysk niż srebro i lepszy jej plon niż
             złoto.&quot; (Prz 3:13-14)
           </Heading>
-          <Button type="link" href="#hero" variant="icon">
+          <Button type="link" href="#introduction" variant="icon icon--big">
             <Icon name="go-down" />
           </Button>
         </Billboard>
@@ -381,7 +387,7 @@ function App() {
         </Contact>
       </Main>
       <Footer>
-        <Button type="button" variant="icon">
+        <Button type="button" variant="icon icon--big">
           <Icon name="go-top" />
         </Button>
         <Button type="link" href="https://kamil-mlu.pl/" variant="primary">
@@ -399,19 +405,19 @@ function Main({ children }) {
 }
 
 function Hero({ children }) {
-  return <div className="hero">{children}</div>;
+  return <div className="hero" id="introduction">{children}</div>;
 }
 
 function Demo({ children }) {
-  return <div className="demo">{children}</div>;
+  return <div className="demo" id="demo">{children}</div>;
 }
 
 function FAQ({ children }) {
-  return <div className="faq">{children}</div>;
+  return <div className="faq" id="faq">{children}</div>;
 }
 
 function Contact({ children }) {
-  return <div className="contact">{children}</div>;
+  return <div className="contact" id="contact">{children}</div>;
 }
 
 function Heading({ children, type }) {

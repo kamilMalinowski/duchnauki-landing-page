@@ -1,9 +1,15 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   @media screen and (max-width: 50rem) {
     flex-direction: row-reverse;
+  }
+  &__separator{
+    width: 2px;
+    height: 1.2rem;
+    border-radius: 1rem;
+    background-color: var(--grey-500);
   }
   &__list {
     padding: 2px;
@@ -13,13 +19,23 @@
     display: flex;
     @media screen and (max-width: 50rem) {
       display: none;
+      &.open{
+        display: grid;
+        z-index: 9;
+        position: absolute;
+        top:4.5rem;
+        right: 2.5rem;
+      }
     }
     & svg path{
-      fill: var(--primary);
+      stroke: var(--primary);
     }
   }
   &__lang {
+    background-color: var(--grey-100);
     position: relative;
+    padding: 2px;
+    border-radius: 0.5rem;
   }
   &__lang-list {
     display: none;
@@ -30,7 +46,8 @@
       padding: 2px;
       gap: 2px;
       border-radius: 0.5rem;
-      background-color: var(--grey-100);
+      background-color: var(--white);
+      border: 2px solid var(--grey-100);
       display: grid;
       position: absolute;
       & button,
