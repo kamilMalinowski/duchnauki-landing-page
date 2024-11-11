@@ -71,12 +71,31 @@ const cardsArr2 = [
   },
 ];
 
+const faqArr = [
+  {
+    question: "Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po?",
+    answer:
+      "Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po bogactwach duchowej mądrości. Tu, na krzyżujących się ścieżkach wiedzy i źródeł wiary, odkryjesz głębokie prawdy, które ułatwią ci zrozumienie Boskiej istoty i sensu Twojej egzystencji.",
+  },
+  {
+    question: "Jak znaleźć duchowe przewodnictwo na DuchNauki.pl?",
+    answer:
+      "DuchNauki.pl oferuje liczne zasoby do odkrywania duchowego przewodnictwa, w tym artykuły, poradniki oraz analizy tekstów świętych.",
+  },
+];
+
 function App() {
   const [openLang, setOpenLang] = useState(false);
 
   function handleOpenLang() {
     setOpenLang((prevLang) => !prevLang);
   }
+
+  const [openAnswerIndex, setOpenAnswerIndex] = useState(0);
+
+  const handleOpenAnswer = (index) => {
+    setOpenAnswerIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
   return (
     <>
@@ -239,11 +258,11 @@ function App() {
               </Text>
             </header>
             <section className="demo__grid">
-            <article className="demo__card column">
+              <article className="demo__card column">
                 <div className="demo__img-wrapper">
                   <img src={teenagers} alt="teenagers" />
                 </div>
-                <section className="demo__content"> 
+                <section className="demo__content">
                   <Heading type="h3">Dla młodzieży</Heading>
                   <Text>
                     Interaktywna lekcja dostosowana do potrzeb młodzieży, które
@@ -258,7 +277,7 @@ function App() {
                 <div className="demo__img-wrapper">
                   <img src={kids} alt="kids" />
                 </div>
-                <section className="demo__content"> 
+                <section className="demo__content">
                   <Heading type="h3">Dla dzieci</Heading>
                   <Text>
                     Interaktywna lekcja dostosowana do potrzeb młodzieży,
@@ -274,9 +293,11 @@ function App() {
                 <div className="demo__img-wrapper">
                   <img src={other} alt="other" />
                 </div>
-                <section className="demo__content"> 
+                <section className="demo__content">
                   <Heading type="h3">Inne</Heading>
-                  <Text>Mini gry i zabawy, które wciągną każdego entuzjastę zabawy</Text>
+                  <Text>
+                    Mini gry i zabawy, które wciągną każdego entuzjastę zabawy
+                  </Text>
                   <Button type="link" variant="primary">
                     <Icon name="hat" />
                     Zobacz Demo
@@ -287,7 +308,7 @@ function App() {
                 <div className="demo__img-wrapper">
                   <img src={adults} alt="adults" />
                 </div>
-                <section className="demo__content"> 
+                <section className="demo__content">
                   <Heading type="h3">Dla dorosłych</Heading>
                   <Text>
                     Interaktywna lekcja dostosowana do potrzeb dorosłych
@@ -310,24 +331,29 @@ function App() {
                 inspirują do refleksji.
               </Text>
             </header>
-            <section>
-              <article className="faq__article">
-                <button className="faq__question-btn">
-                  <Text variant="big bold">
-                    Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po?
-                  </Text>
-                  <Icon name="plus" />
-                </button>
-                <div className="faq__answer">
-                  <Text variant="big medium">
-                    Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po
-                    bogactwach duchowej mądrości. Tu, na krzyżujących się
-                    ścieżkach wiedzy i źródeł wiary, odkryjesz głębokie prawdy,
-                    które ułatwią ci zrozumienie Boskiej istoty i sensu Twojej
-                    egzystencji.
-                  </Text>
-                </div>
-              </article>
+            <section className="faq__section">
+              {faqArr.map((item, index) => (
+                <article key={item.question} className="faq__article">
+                  <button
+                    className="faq__question-btn"
+                    onClick={() => handleOpenAnswer(index)}
+                  >
+                    <Text variant="big bold">{item.question}</Text>
+                    <div   className={`faq__icon-wrapper ${
+                      openAnswerIndex === index ? "" : "close"
+                    }`}>
+                      <Icon name="close" />
+                    </div>
+                  </button>
+                  <div
+                    className={`faq__answer ${
+                      openAnswerIndex === index ? "open" : ""
+                    }`}
+                  >
+                    <Text variant="big medium">{item.answer}</Text>
+                  </div>
+                </article>
+              ))}
             </section>
           </div>
         </FAQ>
