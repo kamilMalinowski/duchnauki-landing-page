@@ -1,22 +1,27 @@
 function IconGarman() {
   return (
     <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
     >
-      <g clipPath="url(#clip0_178_18)">
-        <path d="M0 13.3334H20V20H0V13.3334Z" fill="#FFCE00" />
-        <path d="M0 0H20V6.66667H0V0Z" fill="black" />
-        <path d="M0 6.66663H20V13.3333H0V6.66663Z" fill="#DD0000" />
-      </g>
-      <defs>
-        <clipPath id="clip0_178_18">
-          <rect width="20" height="20" fill="white" />
-        </clipPath>
-      </defs>
+      <path fill="#cc2b1d" d="M1 11H31V21H1z"></path>
+      <path d="M5,4H27c2.208,0,4,1.792,4,4v4H1v-4c0-2.208,1.792-4,4-4Z"></path>
+      <path
+        d="M5,20H27c2.208,0,4,1.792,4,4v4H1v-4c0-2.208,1.792-4,4-4Z"
+        transform="rotate(180 16 24)"
+        fill="#f8d147"
+      ></path>
+      <path
+        d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z"
+        opacity=".15"
+      ></path>
+      <path
+        d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z"
+        fill="#fff"
+        opacity=".2"
+      ></path>
     </svg>
   );
 }

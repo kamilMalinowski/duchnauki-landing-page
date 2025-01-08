@@ -9,13 +9,22 @@
     width: 2px;
     height: 1.2rem;
     border-radius: 1rem;
-    background-color: var(--grey-500);
+    background-color: var(--grey-900);
+    animation: move_1 infinite  alternate 1s ease-in-out; 
+    @keyframes move_1 {
+      0%{
+        transform:rotate(5deg);
+      }
+      100%{
+        transform:rotate(-5deg);
+      }
+    }
   }
   &__list {
-    padding: 2px;
+    overflow: hidden;
     gap: 2px;
     border-radius: 0.5rem;
-    background-color: var(--grey-100);
+    background-color: var(--grey-200);
     display: flex;
     @media screen and (max-width: 50rem) {
       display: none;
@@ -23,7 +32,7 @@
         display: grid;
         z-index: 9;
         position: absolute;
-        top:4.5rem;
+        top:4.1rem;
         right: 2.5rem;
       }
     }
@@ -32,22 +41,20 @@
     }
   }
   &__lang {
-    background-color: var(--grey-100);
     position: relative;
-    padding: 2px;
     border-radius: 0.5rem;
   }
   &__lang-list {
     display: none;
     &.open {
+      overflow: hidden;
       width: 120%;
       top: calc(100% + 0.5rem);
       right: 0;
-      padding: 2px;
       gap: 2px;
       border-radius: 0.5rem;
-      background-color: var(--white);
-      border: 2px solid var(--grey-100);
+      background-color: var(--grey-200);
+      box-shadow:  0 0.8rem 2rem rgba(33, 33, 33, 0.3) ;
       display: grid;
       position: absolute;
       & button,

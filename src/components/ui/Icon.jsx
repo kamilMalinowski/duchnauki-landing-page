@@ -24,6 +24,8 @@ import IconEnglish from "../../components/icons/IconEnglish";
 import IconGerman from "../../components/icons/IconGerman";
 import IconJapanese from "../../components/icons/IconJapanese";
 
+import './Icon.scss'
+
 function Icon({ name }) {
   return (
     <>

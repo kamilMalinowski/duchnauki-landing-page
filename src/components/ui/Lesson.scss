@@ -1,0 +1,8 @@
+.lesson-card{
+    padding: 1rem;
+    border: 2px dashed var(--grey-500);
+    border-radius: 1rem;
+    height: 10rem;
+    display: grid;
+    place-content: center;
+}

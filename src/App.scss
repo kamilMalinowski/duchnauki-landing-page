@@ -40,12 +40,21 @@ h3 {
 }
 
 .hero {
+  & .wrapper{
+    background-image: url('./assets/jesus.png');
+    background-repeat: no-repeat;
+    background-position: top 4rem right;
+    background-size: 33.75rem;
+
+  }
   &__section {
     margin-bottom: 5rem;
     & :nth-child(1) {
       width: min(100%, 34rem);
+      text-shadow: 0 0 10px white, 0 0 10px white ,0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white;
     }
     & :nth-child(2) {
+      text-shadow: 0 0 10px white, 0 0 10px white ,0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white;
       width: min(100%, 40rem);
       margin-bottom: 1.625rem;
     }
@@ -86,21 +95,16 @@ h3 {
     gap: 1rem;
     grid-template-columns: 1fr;
     & > * {
-        
-        flex-direction: column;
-      
+      flex-direction: column;
     }
     @media screen and (min-width: 40rem) {
-     grid-template-columns:  1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
     @media screen and (min-width: 70rem) {
       grid-template-columns: 1fr 1.5fr 1.5fr;
       & > *:not(:nth-child(1)) {
-  
         flex-direction: row;
-      
-    }
-
+      }
       & :nth-child(1) {
         grid-row: 1/ 3;
       }
@@ -118,13 +122,15 @@ h3 {
         background-color: var(--white);
       }
     }
-
   }
   &__card {
     border-radius: 1rem;
     padding: 0.5rem;
     display: flex;
     background-color: var(--white);
+    & svg path{
+      stroke: var(--primary);
+    }
     &.active {
       background-color: var(--secondary);
       & h3,
@@ -135,8 +141,6 @@ h3 {
     & > * {
       flex-basis: 100%;
     }
-
-   
   }
   &__img-wrapper {
     width: 100%;
@@ -149,6 +153,7 @@ h3 {
       height: 100%;
       object-fit: cover;
       object-position: top;
+      aspect-ratio: 16 / 10;
     }
   }
 }
@@ -158,16 +163,16 @@ h3 {
     margin-bottom: 5rem;
     width: min(100%, 50rem);
   }
-  &__icon-wrapper{
+  &__icon-wrapper {
     transition: all 0.2s;
     display: flex;
-    &.close{
+    &.close {
       transform: rotate(-45deg);
     }
   }
-  &__section{
-   display: grid;
-   gap: 1rem; 
+  &__section {
+    display: grid;
+    gap: 1rem;
   }
   &__article {
     display: grid;
@@ -193,14 +198,14 @@ h3 {
   &__answer {
     transition: all 0.2s;
     display: none;
-    &.open{
+    &.open {
       animation: showAnswer 0.2s ease-in-out;
       padding: 2rem;
       border-radius: 1rem;
       border: 2px solid var(--grey-200);
       display: block;
       @keyframes showAnswer {
-        0%{
+        0% {
           opacity: 0;
           transform: translateY(-1rem);
         }
@@ -225,5 +230,3 @@ h3 {
     }
   }
 }
-
-
