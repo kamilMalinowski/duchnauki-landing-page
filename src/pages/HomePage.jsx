@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink, Link } from "react-router";
+import { NavLink } from "react-router";
 
 import { faq } from "../data/faq";
 import { infoCards } from "../data/infoCards";
@@ -43,9 +43,9 @@ function HomePage() {
             nabył rozumu, gdyż lepszy jej zysk niż srebro i lepszy jej plon niż
             złoto.&quot; (Prz 3:13-14)
           </Heading>
-          <Link to="/#introduction" className="button icon icon--big">
+          <Button type="button" ariaLabel="Go to introduction section" variant="icon icon--big">
             <Icon name="go-down" />
-          </Link>
+          </Button>
         </Billboard>
         <Hero>
           <div className="wrapper">
@@ -100,7 +100,7 @@ function HomePage() {
                     Interaktywna lekcja dostosowana do potrzeb młodzieży, które
                     angażują i inspirują do refleksji.
                   </Text>
-                  <Button type="link" variant="primary disabled">
+                  <Button type="link" href="#"  variant="primary disabled">
                     <Icon name="wait" />W budowie
                   </Button>
                 </section>
@@ -116,7 +116,7 @@ function HomePage() {
                     zawierająca ciekawe wyzwania i tematy, które angażują i
                     inspirują do refleksji.
                   </Text>
-                  <Button type="link" variant="primary disabled">
+                  <Button type="link" href="#" variant="primary disabled">
                     <Icon name="wait" />W budowie
                   </Button>
                 </section>
@@ -145,7 +145,7 @@ function HomePage() {
                   <Text>
                     Interaktywna lekcja dostosowana do potrzeb dorosłych
                   </Text>
-                  <Button type="link" variant="primary disabled">
+                  <Button type="link" href="#" variant="primary  disabled">
                     <Icon name="wait" />W budowie
                   </Button>
                 </section>
@@ -221,6 +221,7 @@ function HomePage() {
       </Main>
       <Footer>
         <Button
+        ariaLabel="Go to top of page"
           type="button"
           variant="icon icon--big"
           onClick={handleBackToStart}
