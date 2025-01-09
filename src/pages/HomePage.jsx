@@ -67,7 +67,7 @@ function HomePage() {
               </NavLink>
             </section>
             <section>
-              <Heading type="h3">Jak to działa?</Heading>
+              <Heading type="h2">Jak to działa?</Heading>
               <ul className="list">
                 {infoCards.map((card) => (
                   <Card key={card.text} variant={card.variant} type="button">
