@@ -60,12 +60,13 @@ function Header() {
     <header className="main-header">
       <div className="main-header__wrapper">
         <div className="main-header__content">
-          <Link to="/" className="button logo">
+          <Link ariaLabel="Logo Duch Nauki" to="/" className="button logo">
             <Icon name="duch-nauki" />
             <Text>DuchNauki</Text>
           </Link>
           <Nav>
             <Button
+              ariaLabel="Hamburger menu button"
               onClick={handleOpenMenu}
               type="button"
               variant={`${
