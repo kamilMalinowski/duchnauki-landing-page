@@ -2,7 +2,7 @@ import "./Game_1.scss"
 
 function Game_1() {
   return (
-  <div>game</div>
+  <div className="game-1">Coming soon</div>
   );
 }
 

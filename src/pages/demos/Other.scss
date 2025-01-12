@@ -3,3 +3,15 @@
     margin-inline: auto;
     padding: 1.5rem;
 }
+
+.other-section{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    gap: 1.5rem;
+    & [href="/"]{
+        opacity: 0.2;
+        pointer-events: none;
+    }
+
+}

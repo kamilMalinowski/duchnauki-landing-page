@@ -13,8 +13,8 @@ function Other() {
             </NavLink>
           </nav>
         </header>
-        <div>
-          <Lesson path="/demos/other/game_1" />
+        <div className="other-section">
+          <Lesson target="_blank" path="/demos/other/game_1" />
           <Lesson path="/" />
           <Lesson path="/" />
           <Lesson path="/" />
