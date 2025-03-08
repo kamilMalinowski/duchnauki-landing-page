@@ -41,11 +41,17 @@ h3 {
 
 .hero {
   & .wrapper{
-    background-image: url('./assets/jesus.png');
-    background-repeat: no-repeat;
-    background-position: top 4rem right;
-    background-size: 33.75rem;
-
+    background-image: none;
+    @media screen and (min-width: 60rem) {
+      background-size: 23.75rem;
+      background-repeat: no-repeat;
+      background-image: url('./assets/jesus.png');
+      background-position: top 4rem right;
+    }
+    @media screen and (min-width: 70rem) {
+      background-size: 33.75rem;
+    }
+    
   }
   &__section {
     margin-bottom: 5rem;
