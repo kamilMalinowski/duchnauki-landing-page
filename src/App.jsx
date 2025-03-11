@@ -33,7 +33,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/demos/other" element={<Other />} />
-          <Route  target="_blank" path="/demos/other/game_1" element={<Game_1 />} />
+          <Route path="/demos/other/game_1" element={<Game_1 />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
