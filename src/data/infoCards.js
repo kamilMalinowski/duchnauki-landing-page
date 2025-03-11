@@ -1,27 +1,27 @@
 export const infoCards = [
     {
       icon: "phone",
-      text: "Opowiadasz nam o swoim projekcie",
+      text: "Opowiedz nam o swoim projekcie",
       variant: "grey",
     },
     {
       icon: "mail",
-      text: "Wysyłasz nam twoje materiały",
+      text: "Prześlij swoje materiały",
       variant: "grey",
     },
     {
       icon: "screen",
-      text: "Tworzymy lekcję prezentacyjną",
+      text: "Stworzymy lekcję demonstracyjną",
       variant: "grey",
     },
     {
       icon: "gift",
-      text: "Łączymy siły by projekt się rozwijał",
+      text: "Wspólnie rozwijamy projekt",
       variant: "grey",
     },
     {
       icon: "star",
-      text: "Super nasz wspólny projekt!",
+      text: "Gotowe! Nasza wspólna inicjatywa rośnie!",
       variant: "grey",
     },
   ];

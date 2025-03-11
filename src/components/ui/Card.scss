@@ -17,8 +17,17 @@
     }
     &.grey{
         background-color: var(--grey-100);
-        & *{
+        & > *{
             fill:var(--secondary);
+            min-height: 3rem;
+            margin-inline: auto;
+        }
+        & p {
+            height: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
     &.white{

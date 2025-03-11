@@ -43,21 +43,15 @@ function HomePage() {
             nabył rozumu, gdyż lepszy jej zysk niż srebro i lepszy jej plon niż
             złoto.&quot; (Prz 3:13-14)
           </Heading>
-          <Button type="button" ariaLabel="Go to introduction section" variant="icon icon--big">
-            <Icon name="go-down" />
-          </Button>
         </Billboard>
         <Hero>
           <div className="wrapper">
             <section className="hero__section" id="hero">
               <Heading type="h1">
-                Odkrywaj Duchową Mądrość: Ścieżki Wiedzy i Źródła Wiary
+              DuchNauki – Poznawaj Biblię w nowoczesny i angażujący sposób!
               </Heading>
               <Text variant="big medium grey">
-                Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po
-                bogactwach duchowej mądrości. Tu, na krzyżujących się ścieżkach
-                wiedzy i źródeł wiary, odkryjesz głębokie prawdy, które ułatwią
-                ci zrozumienie Boskiej istoty i sensu Twojej egzystencji.
+              Nauka biblijnych prawd może być angażująca i interaktywna! Tworzymy gry i quizy, które pomagają lepiej zrozumieć Pismo Święte. Masz własne materiały edukacyjne? Przekształcimy je w nowoczesne narzędzia cyfrowe!
               </Text>
               <NavLink
                 to="/demos/other"
@@ -84,9 +78,7 @@ function HomePage() {
             <header>
               <Heading type="h2">Zobacz nasze gry i próbne lekcje</Heading>
               <Text variant="big medium grey">
-                Interaktywna lekcja dostosowana do potrzeb młodzieży,
-                zawierająca ciekawe wyzwania i tematy, które angażują i
-                inspirują do refleksji.
+              Sprawdź, jak interaktywna nauka biblijnych prawd może wyglądać! Zainspiruj się naszymi grami i próbami lekcji.
               </Text>
             </header>
             <section className="demo__grid">
@@ -97,7 +89,7 @@ function HomePage() {
                 <section className="demo__content">
                   <Heading type="h3">Dla młodzieży</Heading>
                   <Text>
-                    Interaktywna lekcja dostosowana do potrzeb młodzieży, które
+                    Interaktywne lekcje dostosowane do potrzeb młodzieży, które
                     angażują i inspirują do refleksji.
                   </Text>
                   <Button type="link" href="#"  variant="primary disabled">
@@ -112,9 +104,7 @@ function HomePage() {
                 <section className="demo__content">
                   <Heading type="h3">Dla dzieci</Heading>
                   <Text>
-                    Interaktywna lekcja dostosowana do potrzeb młodzieży,
-                    zawierająca ciekawe wyzwania i tematy, które angażują i
-                    inspirują do refleksji.
+                  Lekcje pełne zabawy i odkryć, dostosowana do dzieci. Ciekawe wyzwania i angażujące treści sprawiają, że nauka Biblii staje się przygodą!
                   </Text>
                   <Button type="link" href="#" variant="primary disabled">
                     <Icon name="wait" />W budowie
@@ -156,11 +146,9 @@ function HomePage() {
         <FAQ>
           <div className="wrapper">
             <header>
-              <Heading type="h2">FAQs</Heading>
+              <Heading type="h2">Najczęstsze pytania</Heading>
               <Text variant="big medium grey">
-                Interaktywna lekcja dostosowana do potrzeb młodzieży,
-                zawierająca ciekawe wyzwania i tematy, które angażują i
-                inspirują do refleksji.
+              Masz wątpliwości? Sprawdź odpowiedzi na najczęściej zadawane pytania i dowiedz się więcej o naszych grach, lekcjach i współpracy!
               </Text>
             </header>
             <section className="faq__section">
@@ -196,8 +184,7 @@ function HomePage() {
             <header className="contact__header">
               <Heading type="h2">Napisz do nas!</Heading>
               <Text variant="big medium">
-                Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po
-                bogactwach duchowej mądrości. Tu, na krzyżujących się
+              Masz pytania, pomysł na współpracę lub chcesz stworzyć własną interaktywną lekcję? Napisz do nas! Chętnie odpowiemy i pomożemy zrealizować Twój projekt.
               </Text>
             </header>
             <section className="contact__section">

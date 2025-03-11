@@ -2,23 +2,23 @@
 
 export const faq = [
   {
-    question: "Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po?",
+    question: "Czym jest DuchNauki?",
     answer:
-      "Witaj na DuchNauki.pl - Twoim niezwykłym przewodniku po bogactwach duchowej mądrości. Tu, na krzyżujących się ścieżkach wiedzy i źródeł wiary, odkryjesz głębokie prawdy, które ułatwią ci zrozumienie Boskiej istoty i sensu Twojej egzystencji.",
+      "DuchNauki to platforma, która pomaga odkrywać biblijne prawdy poprzez interaktywne gry i quizy. Tworzymy także cyfrowe wersje materiałów edukacyjnych.",
   },
   {
-    question: "Jak znaleźć duchowe przewodnictwo na DuchNauki.pl? 1",
+    question: "Dla kogo są te gry i lekcje?",
     answer:
-      "DuchNauki.pl oferuje liczne zasoby do odkrywania duchowego przewodnictwa, w tym artykuły, poradniki oraz analizy tekstów świętych.",
+      "Nasze treści są skierowane do dzieci, młodzieży i dorosłych, którzy chcą uczyć się Biblii w angażujący sposób.",
   },
   {
-    question: "Jak znaleźć duchowe przewodnictwo na DuchNauki.pl? 2",
+    question: "Jak mogę wypróbować wasze gry i lekcje?",
     answer:
-      "DuchNauki.pl oferuje liczne zasoby do odkrywania duchowego przewodnictwa, w tym artykuły, poradniki oraz analizy tekstów świętych.",
+      `Kliknij "Zobacz demo" i sprawdź, jak działa nasza platforma!`,
   },
   {
-    question: "Jak znaleźć duchowe przewodnictwo na DuchNauki.pl? 3",
+    question: "Czy mogę dodać własne materiały edukacyjne?",
     answer:
-      "DuchNauki.pl oferuje liczne zasoby do odkrywania duchowego przewodnictwa, w tym artykuły, poradniki oraz analizy tekstów świętych.",
+      "Tak! Jeśli masz papierowe materiały edukacyjne, pomożemy Ci przekształcić je w interaktywne lekcje.",
   },
 ];
