@@ -3,7 +3,7 @@ import "./Lesson.scss"
 
 function Lesson({path}) {
   return (
-  <NavLink to={path} target="_blank" className="lesson-card">
+  <NavLink to={path} className="lesson-card">
 Zobacz grę
   </NavLink>
   );
