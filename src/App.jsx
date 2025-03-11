@@ -5,10 +5,10 @@ import { useLocation } from "react-router";
 
 import HomePage from "./pages/HomePage";
 import Other from "./pages/demos/Other";
+import Game_1 from "./pages/demos/other/Game_1";
 import PageNotFound from "./pages/PageNotFound";
 
 import "./App.scss";
-import Game_1 from "./pages/demos/other/Game_1";
 
 function App() {
   function ScrollToHash() {
@@ -33,7 +33,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/demos/other" element={<Other />} />
-          <Route path="/demos/other/game_1" element={<Game_1 />} />
+          <Route  target="_blank" path="/demos/other/game_1" element={<Game_1 />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

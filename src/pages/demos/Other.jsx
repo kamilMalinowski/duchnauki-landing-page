@@ -1,6 +1,5 @@
 import { NavLink } from "react-router";
 import Lesson from "../../components/ui/Lesson";
-import Game_1 from "./other/Game_1";
 import "./Other.scss";
 
 function Other() {
@@ -15,7 +14,7 @@ function Other() {
           </nav>
         </header>
         <div className="other-section">
-          <Lesson target="_blank" path="/demos/other/game_1" element={<Game_1 />}/>
+          <Lesson path="/demos/other/game_1"/>
           <Lesson path="/" />
           <Lesson path="/" />
           <Lesson path="/" />
